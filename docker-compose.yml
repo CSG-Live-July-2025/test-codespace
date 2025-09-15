@@ -5,8 +5,6 @@ services:
       context: .
       dockerfile: .devcontainer/Dockerfile
     command: sleep infinity
-    volumes:
-      - .:/workspace:cached
     environment:
       POSTGRES_HOST: db
       POSTGRES_USER: postgres

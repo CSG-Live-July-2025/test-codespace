@@ -1,12 +1,9 @@
 {
   "name": "Rails + Postgres",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": ["../docker-compose.yml"],
   "service": "app",
-  "workspaceFolder": "/workspace",
   "runServices": ["db"],
-  "forwardPorts": [3000],
-  "portsAttributes": {
-    "3000": { "label": "Rails" }
-  },
+  "forwardPorts": [3000, 5432],
+  "portsAttributes": { "3000": { "label": "Rails" } },
   "postCreateCommand": "gem install bundler -N || true"
 }
